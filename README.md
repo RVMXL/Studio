@@ -44,4 +44,4 @@ bun run dev            # локальная разработка на :3000
 
 ---
 
-© 2026 RVMXL · OBS. КАЗАНЬ · 55.7963°N 49.1088°E · DEEP VIOLET BAND
+© 2026 RVMXL · DEEP VIOLET BAND
