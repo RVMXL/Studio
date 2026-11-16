@@ -1,0 +1,41 @@
+# dependencies
+node_modules
+.pnp
+.pnp.*
+
+# next.js
+/.next/
+/.next-export/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# logs
+*.log
+dev.log
+server.log
+
+# env
+.env*
+.env.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# sandbox / local artifacts (не часть сайта)
+/db
+/upload
+/download
+/tests
+/examples
+/.zscripts
+/skills
+/mini-services
+/deploy-staging
+Caddyfile
