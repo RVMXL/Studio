@@ -9,7 +9,7 @@ export interface LiveRepoStat {
 }
 
 interface StationState {
-  channel: number; // 0 = станция, 1..6 = сигналы
+  channel: number; // 0 = станция, 1..7 = сигналы
   booted: boolean;
   tuning: boolean; // идёт захват сигнала (шум)
   audioOn: boolean;
@@ -27,7 +27,7 @@ function readInitialChannel(): number {
   if (typeof window === "undefined") return 0;
   const m = CHANNEL_KEY_RE.exec(window.location.hash.slice(1));
   if (m) {
-    const n = Math.min(6, Math.max(0, Number(m[1])));
+    const n = Math.min(7, Math.max(0, Number(m[1])));
     return n;
   }
   return 0;
@@ -51,7 +51,7 @@ export const useStation = create<StationState>((set) => ({
   statsSource: "loading",
   setChannel: (i) =>
     set(() => {
-      const channel = Math.min(6, Math.max(0, i));
+      const channel = Math.min(7, Math.max(0, i));
       if (typeof window !== "undefined") {
         window.history.replaceState(null, "", `#ch-${channel}`);
       }

@@ -14,7 +14,7 @@ import TelemetryBar from "./TelemetryBar";
 
 /**
  * СТАНЦИЯ ВАЙБОВ // RVMXL
- * Не страница, а приёмник: настраивайтесь на частоты (стрелки ↑↓ ←→, цифры 0—6).
+ * Не страница, а приёмник: настраивайтесь на частоты (стрелки ↑↓ ←→, цифры 0—7).
  */
 export default function SignalStation() {
   const channel = useStation((s) => s.channel);
@@ -36,7 +36,7 @@ export default function SignalStation() {
     stageRef.current?.scrollTo({ top: 0 });
   }, [channel]);
 
-  // клавиатурная настройка: стрелки и цифры 0—6
+  // клавиатурная настройка: стрелки и цифры 0—7
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) {
@@ -49,7 +49,7 @@ export default function SignalStation() {
       } else if (["ArrowDown", "ArrowRight"].includes(e.key)) {
         e.preventDefault();
         s.setChannel(s.channel + 1);
-      } else if (/^[0-6]$/.test(e.key)) {
+      } else if (/^[0-7]$/.test(e.key)) {
         s.setChannel(Number(e.key));
       }
     };

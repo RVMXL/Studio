@@ -1,7 +1,7 @@
 "use client";
 
 import { Github, ServerOff, Fingerprint, ShieldCheck, Lock, Antenna } from "lucide-react";
-import { STATION } from "@/data/projects";
+import { STATION, SIGNALS } from "@/data/projects";
 import { useStation } from "@/lib/station-store";
 
 const PRINCIPLE_ICONS: Record<string, typeof ServerOff> = {
@@ -38,7 +38,7 @@ export default function StationChannel() {
       </h1>
 
       <p className="mt-4 text-[15px] md:text-base text-violet-200/80 max-w-prose leading-relaxed">
-        {STATION.subtitle}. Шесть устройств-приёмников поймали сигнал: софт должен
+        {STATION.subtitle}. Семь устройств-приёмников поймали сигнал: софт должен
         жить <span className="text-fuchsia-300">на устройстве человека</span>, а не в чужом облаке.
       </p>
 
@@ -75,7 +75,7 @@ export default function StationChannel() {
       <dl className="flex flex-wrap gap-x-8 gap-y-3 mt-8 font-telemetry text-[10px] uppercase tracking-[0.2em]">
         <div>
           <dt className="text-violet-400/60">сигналов в архиве</dt>
-          <dd className="text-[20px] text-fuchsia-300 mt-1">6</dd>
+          <dd className="text-[20px] text-fuchsia-300 mt-1">{SIGNALS.length}</dd>
         </div>
         <div>
           <dt className="text-violet-400/60">серверов</dt>
@@ -109,7 +109,7 @@ export default function StationChannel() {
       {/* конец передачи */}
       <div className="mt-10 pt-5 border-t border-dashed border-[rgba(168,85,247,0.3)] flex items-center gap-3 font-telemetry text-[9px] uppercase tracking-[0.3em] text-violet-300/50">
         <Antenna size={13} className="text-fuchsia-400/80" aria-hidden="true" />
-        конец передачи · настройтесь на частоты 01—06
+        конец передачи · настройтесь на частоты 01—07
         <span className="caret-blink text-fuchsia-300" aria-hidden="true">▮</span>
       </div>
     </div>

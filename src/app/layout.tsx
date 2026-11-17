@@ -23,7 +23,7 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "RVMXL // СТАНЦИЯ ВАЙБОВ",
   description:
-    "Студия вайбкодинга RVMXL: приёмник сигналов из пурпурного вакуума. 6 офлайн-приложений — без серверов, без аналитики, данные не покидают устройство.",
+    "Студия вайбкодинга RVMXL: приёмник сигналов из пурпурного вакуума. 7 офлайн-приложений — без серверов, без аналитики, данные не покидают устройство.",
   keywords: [
     "RVMXL",
     "вайбкодинг",
@@ -35,12 +35,14 @@ export const metadata: Metadata = {
     "SmartFridge-Chef",
     "Student-AutoAlarm",
     "WarpScoutGUI",
+    "LinkShift",
+    "mklink",
   ],
   authors: [{ name: "RVMXL", url: "https://github.com/rvmxl" }],
   openGraph: {
     title: "RVMXL // СТАНЦИЯ ВАЙБОВ",
     description:
-      "Студия вайбкодинга: 6 сигналов, 0 серверов, 100% офлайн. Настройтесь на частоту.",
+      "Студия вайбкодинга: 7 сигналов, 0 серверов, 100% офлайн. Настройтесь на частоту.",
     url: "https://github.com/rvmxl",
     siteName: "RVMXL STATION",
     type: "website",
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RVMXL // СТАНЦИЯ ВАЙБОВ",
     description:
-      "Студия вайбкодинга: 6 сигналов, 0 серверов, 100% офлайн. Настройтесь на частоту.",
+      "Студия вайбкодинга: 7 сигналов, 0 серверов, 100% офлайн. Настройтесь на частоту.",
   },
 };
 

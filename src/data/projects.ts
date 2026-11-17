@@ -9,7 +9,8 @@ export type VizKind =
   | "docrain"
   | "alarm"
   | "barcode"
-  | "radar";
+  | "radar"
+  | "linkshift";
 
 export type StageLayout =
   | "split-right"
@@ -47,7 +48,7 @@ export const STATION = {
   subtitle: "студия вайбкодинга · приёмник сигналов из пурпурного вакуума",
   profileLink: "https://github.com/rvmxl",
   observatory: "ОБС. КАЗАНЬ · 55.7963°N 49.1088°E",
-  band: "DEEP VIOLET BAND · 87—112 МГц",
+  band: "DEEP VIOLET BAND · 87—117 МГц",
   manifesto: [
     "Мы не строим облака. Мы строим то, что живёт на устройстве.",
     "Каждый сигнал здесь пойман вайбкодингом: человек задаёт направление — энергия делает остальное.",
@@ -213,5 +214,30 @@ export const SIGNALS: ProjectSignal[] = [
     layout: "radar-right",
     language: "TypeScript",
     offlineNote: "скан прямым UDP-зондом, без посредников",
+  },
+  {
+    code: "CH-07",
+    freq: "116.1",
+    name: "LinkShift",
+    glyph: "⇄",
+    category: "STORAGE",
+    subcategory: "СИГНАЛ НОСИТЕЛЕЙ ПАМЯТИ",
+    tagline: "перенос тяжёлых папок через mklink",
+    description:
+      "Переносит папки, кэши и игры на другой диск через robocopy — с правами доступа и атрибутами, а на месте исходника ставит junction. Программы «думают», что ничего не менялось. Транзакция с откатом, сканер тяжёлых папок, инвентаризация ссылок.",
+    details: [
+      "Транзакция «перенести и связать»: проба замка .bak → robocopy → mklink → проверка → откат при любой ошибке",
+      "Сканер диска C: находит кэши Chrome/Telegram/Discord, шейдеры NVIDIA и Steam тяжелее порога",
+      "Инвентаризация всех junction/symlink + «Вернуть как было» — даже для ссылок, созданных вручную",
+    ],
+    tags: ["Neutralino.js", "mklink", "robocopy", "junction", "Windows 11", "RU/EN"],
+    link: "https://github.com/RVMXL/LinkShift",
+    accent: "#a855f7",
+    accentSoft: "rgba(168,85,247,0.14)",
+    accentGlow: "rgba(168,85,247,0.5)",
+    viz: "linkshift",
+    layout: "beam",
+    language: "JavaScript",
+    offlineNote: "robocopy ходит по проводам дисков, а не по облаку",
   },
 ];

@@ -10,6 +10,7 @@ const DocRainViz = dynamic(() => import("./viz/DocRainViz"), { ssr: false });
 const AlarmViz = dynamic(() => import("./viz/AlarmViz"), { ssr: false });
 const BarcodeViz = dynamic(() => import("./viz/BarcodeViz"), { ssr: false });
 const RadarViz = dynamic(() => import("./viz/RadarViz"), { ssr: false });
+const LinkShiftViz = dynamic(() => import("./viz/LinkShiftViz"), { ssr: false });
 
 export default function SignalViz({ kind, accent }: { kind: VizKind; accent: string }) {
   switch (kind) {
@@ -25,6 +26,8 @@ export default function SignalViz({ kind, accent }: { kind: VizKind; accent: str
       return <BarcodeViz accent={accent} />;
     case "radar":
       return <RadarViz accent={accent} />;
+    case "linkshift":
+      return <LinkShiftViz accent={accent} />;
     default:
       return <HumNoteViz accent={accent} />;
   }

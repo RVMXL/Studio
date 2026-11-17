@@ -1,9 +1,9 @@
 "use client";
 
-import { Radio, AudioWaveform, ScanEye, FileText, AlarmClock, Refrigerator, Radar } from "lucide-react";
+import { Radio, AudioWaveform, ScanEye, FileText, AlarmClock, Refrigerator, Radar, Link2 } from "lucide-react";
 import { useStation } from "@/lib/station-store";
 
-const CHANNEL_ICONS = [Radio, AudioWaveform, ScanEye, FileText, AlarmClock, Refrigerator, Radar];
+const CHANNEL_ICONS = [Radio, AudioWaveform, ScanEye, FileText, AlarmClock, Refrigerator, Radar, Link2];
 
 const CHANNELS = [
   { code: "00", label: "СТАНЦИЯ", freq: "87.9", hint: "студия вайбкодинга" },
@@ -13,6 +13,7 @@ const CHANNELS = [
   { code: "04", label: "AUTOALARM", freq: "104.8", hint: "будильник по расписанию" },
   { code: "05", label: "FRIDGECHEF", freq: "108.0", hint: "сроки годности + меню" },
   { code: "06", label: "WARPSCOUT", freq: "111.9", hint: "радар WARP-эндпоинтов" },
+  { code: "07", label: "LINKSHIFT", freq: "116.1", hint: "перенос папок · mklink" },
 ];
 
 /** Диапазон настройки: вертикальная шкала частот. */
@@ -118,7 +119,7 @@ export default function ChannelRail() {
 
       {/* подсказка клавиатурной настройки */}
       <p className="hidden md:block font-telemetry text-[8px] uppercase tracking-[0.24em] text-violet-400/45 px-5 mt-auto pt-6 pb-1">
-        клавиши: ↑↓ ←→ · 0—6
+        клавиши: ↑↓ ←→ · 0—7
       </p>
     </nav>
   );
